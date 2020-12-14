@@ -16,23 +16,19 @@ addEventListener("load", function() {
    planet().then(data => {
       let ranNum = Math.floor(Math.random() * 6);
       let info = data[ranNum];
-      missionTarget.innerHTML = `
-      <h2>Mission Destination</h2>
-      <ol>
-         <li>Name: ${info.name}</li>
-         <li>Diameter: ${info.diameter}</li>
-         <li>Star: ${info.star}</li>
-         <li>Distance from Earth: ${info.distance}</li>
-         <li>Number of Moons: ${info.moons}</li>
-      </ol>
-      <img src="${info.image}">`;
-      
-      
-   })
-       
-      .catch(reason => 
-      console.log(reason.message)
-   )
+      missionTarget.innerHTML = 
+         `<h2>Mission Destination</h2>
+         <ol>
+            <li>Name: ${info.name}</li>
+            <li>Diameter: ${info.diameter}</li>
+            <li>Star: ${info.star}</li>
+            <li>Distance from Earth: ${info.distance}</li>
+            <li>Number of Moons: ${info.moons}</li>
+         </ol>
+         <img src="${info.image}">`;
+            
+      })
+   
 
 
    launchForm.addEventListener("submit", function() {
