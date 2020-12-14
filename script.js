@@ -26,10 +26,7 @@ addEventListener("load", function() {
             <li>Number of Moons: ${info.moons}</li>
          </ol>
          <img src="${info.image}">`;
-            
       })
-   
-
 
    launchForm.addEventListener("submit", function() {
       let pilotName = document.querySelector("input[name=pilotName]");
@@ -94,14 +91,8 @@ addEventListener("load", function() {
          cargoStatus.innerHTML = `Cargo mass low enough for launch`;
          event.preventDefault();
          return;
-      }
-
-
-      
+      }  
    });
-
-
-
 });
 // Write your JavaScript code here!
 
